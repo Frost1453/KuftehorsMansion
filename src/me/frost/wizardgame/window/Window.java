@@ -1,6 +1,5 @@
 package me.frost.wizardgame.window;
 
-import me.frost.wizardgame.assets.ImageLoader;
 import me.frost.wizardgame.game.Game;
 
 import javax.imageio.ImageIO;
@@ -9,19 +8,19 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
-import java.util.Locale;
 
 public class Window {
 
     BufferedImage iconImage;
+    File icon = new File("assets\\icon\\berkecanIcon.png");
 
     public Window(int width, int height, String title, Game game) {
-        Window window = this;
 
-        ImageLoader loader = new ImageLoader();
-        iconImage = loader.loadImage("/berkecanicon.png");
-
+        try {
+            iconImage = ImageIO.read(icon);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         JFrame jf = new JFrame(title);
         jf.setPreferredSize(new Dimension(width, height));

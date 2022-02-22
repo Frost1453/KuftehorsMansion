@@ -30,10 +30,10 @@ public class KeyInput extends KeyAdapter {
             if (obj.getID() == ID.Player) {
                 //key events for player 1
 
-                if (key == KeyEvent.VK_W) { obj.setVelY(-5); keyDown[0] = true; }
-                if (key == KeyEvent.VK_A) { obj.setVelX(-5); keyDown[1] = true; }
-                if (key == KeyEvent.VK_S) { obj.setVelY(5); keyDown[2] = true; }
-                if (key == KeyEvent.VK_D) { obj.setVelX(5); keyDown[3] = true;}
+                if (key == KeyEvent.VK_W) { obj.setVelY(-4); keyDown[0] = true; }
+                if (key == KeyEvent.VK_A) { obj.setVelX(-4); keyDown[1] = true; }
+                if (key == KeyEvent.VK_S) { obj.setVelY(4); keyDown[2] = true; }
+                if (key == KeyEvent.VK_D) { obj.setVelX(4); keyDown[3] = true;}
             }
         }
 

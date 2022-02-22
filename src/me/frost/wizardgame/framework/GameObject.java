@@ -1,5 +1,7 @@
 package me.frost.wizardgame.framework;
 
+import me.frost.wizardgame.assets.SpriteSheet;
+
 import java.awt.*;
 
 public abstract class GameObject {
@@ -7,11 +9,13 @@ public abstract class GameObject {
     protected int x, y;
     protected float velX = 0, velY = 0;
     protected ID id;
+    protected SpriteSheet ss;
 
-    public GameObject(int x, int y, ID id) {
+    public GameObject(int x, int y, ID id, SpriteSheet ss) {
         this.x = x;
         this.y = y;
         this.id = id;
+        this.ss = ss;
     }
 
     public abstract void update();

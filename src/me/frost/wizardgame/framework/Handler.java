@@ -1,11 +1,12 @@
 package me.frost.wizardgame.framework;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Handler {
 
-    public LinkedList<GameObject> objects = new LinkedList<>();
+    public ArrayList<GameObject> objects = new ArrayList<>();
 
 
     public void update() {
